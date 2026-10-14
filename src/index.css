@@ -1,0 +1,190 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #F5EFE6;
+    color: #3B3F63;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+}
+
+/* Authentic Graph Paper Grid from reference PDF - Light Theme */
+.pdf-grid-bg {
+  background-color: #F4EFE6;
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(59, 63, 99, 0.08) 1.5px, transparent 1.5px),
+    linear-gradient(to bottom, rgba(59, 63, 99, 0.08) 1.5px, transparent 1.5px);
+  transition: background-color 0.25s ease;
+}
+
+/* Dark Theme Graph Paper Grid */
+.dark body {
+  background-color: #141620;
+  color: #E2E8F0;
+}
+
+.dark .pdf-grid-bg {
+  background-color: #141620;
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(163, 183, 216, 0.07) 1.5px, transparent 1.5px),
+    linear-gradient(to bottom, rgba(163, 183, 216, 0.07) 1.5px, transparent 1.5px);
+}
+
+.font-display {
+  font-family: 'Syne', 'Bricolage Grotesque', sans-serif;
+  font-weight: 800;
+}
+
+.font-chunky {
+  font-family: 'Bricolage Grotesque', 'Syne', sans-serif;
+  font-weight: 800;
+}
+
+/* Signature Stickers with Thick Black Border and Crisp Hard Offset Shadow */
+.sticker-shadow {
+  box-shadow: 4px 4px 0px #1E1E24;
+}
+
+.sticker-shadow-lg {
+  box-shadow: 6px 6px 0px #1E1E24;
+}
+
+.dark .sticker-shadow {
+  box-shadow: 4px 4px 0px #090A0F;
+}
+
+.dark .sticker-shadow-lg {
+  box-shadow: 6px 6px 0px #090A0F;
+}
+
+.card-shadow {
+  box-shadow: 0 10px 25px -5px rgba(59, 63, 99, 0.1), 0 8px 10px -6px rgba(59, 63, 99, 0.1);
+}
+
+.dark .card-shadow {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+}
+
+.sticker-pill {
+  border: 2px solid #1E1E24;
+  box-shadow: 3px 3px 0px #1E1E24;
+}
+
+/* Comprehensive Dark Mode Overrides for Retro-Modern Theme */
+.dark .bg-white {
+  background-color: #1E212E !important;
+  color: #F1F5F9;
+}
+
+.dark .bg-white\/95 {
+  background-color: rgba(30, 33, 46, 0.95) !important;
+}
+
+.dark .bg-white\/80 {
+  background-color: rgba(30, 33, 46, 0.8) !important;
+}
+
+.dark .bg-white\/70 {
+  background-color: rgba(30, 33, 46, 0.7) !important;
+}
+
+.dark .bg-\[\#F5EFE6\] {
+  background-color: #181A25 !important;
+}
+
+.dark .bg-\[\#F5EFE6\]\/95 {
+  background-color: rgba(24, 26, 37, 0.95) !important;
+}
+
+.dark .bg-\[\#EFEADF\] {
+  background-color: #10121A !important;
+}
+
+.dark .text-\[\#3B3F63\] {
+  color: #E2E8F0 !important;
+}
+
+.dark .text-\[\#3B3F63\]\/70,
+.dark .text-\[\#3B3F63\]\/80,
+.dark .text-\[\#3B3F63\]\/60 {
+  color: #94A3B8 !important;
+}
+
+.dark .text-gray-500,
+.dark .text-gray-600,
+.dark .text-gray-700 {
+  color: #A0AEC0 !important;
+}
+
+.dark .border-\[\#1E1E24\] {
+  border-color: #383D54 !important;
+}
+
+.dark .border-3 {
+  border-color: #383D54 !important;
+}
+
+.dark .border-gray-200,
+.dark .border-gray-300 {
+  border-color: #2D3245 !important;
+}
+
+.dark .bg-gray-100 {
+  background-color: #282C3D !important;
+  color: #E2E8F0 !important;
+}
+
+.dark .bg-gray-200 {
+  background-color: #2F3449 !important;
+  color: #E2E8F0 !important;
+}
+
+.dark .hover\:bg-gray-100:hover {
+  background-color: #282C3D !important;
+}
+
+.dark .hover\:bg-gray-200:hover {
+  background-color: #353B52 !important;
+}
+
+.dark input, 
+.dark textarea, 
+.dark select {
+  background-color: #191B26 !important;
+  color: #F1F5F9 !important;
+  border-color: #3E445E !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #EFE8DA;
+}
+::-webkit-scrollbar-thumb {
+  background: #A3B7D8;
+  border-radius: 4px;
+  border: 2px solid #F5EFE6;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3B3F63;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #141620;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 4px;
+  border: 2px solid #141620;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #A3B7D8;
+}
