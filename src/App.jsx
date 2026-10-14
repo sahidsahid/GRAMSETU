@@ -198,15 +198,17 @@ export default function App() {
           onToggleDark={() => setIsDark(prev => !prev)}
         />
 
-        {/* Emergency Alert Banner */}
-        <EmergencyBanner
-          currentVillage={currentVillage}
-          onOpenSOS={() => setSosModalOpen(true)}
-          activeRole={activeRole}
-          onBroadcastAlert={handleBroadcastAlert}
-          activeLang={activeLang}
-          t={t}
-        />
+        {/* Emergency Alert Banner (Shown on sub-tabs) */}
+        {activeTab !== 'overview' && (
+          <EmergencyBanner
+            currentVillage={currentVillage}
+            onOpenSOS={() => setSosModalOpen(true)}
+            activeRole={activeRole}
+            onBroadcastAlert={handleBroadcastAlert}
+            activeLang={activeLang}
+            t={t}
+          />
+        )}
 
         {/* Main Content Area - Fluid Edge-to-Edge Widescreen */}
         <main className="w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 py-6 sm:py-8">
@@ -229,6 +231,7 @@ export default function App() {
                   onTabChange={setActiveTab}
                   activeLang={activeLang}
                   t={t}
+                  onOpenSOS={() => setSosModalOpen(true)}
                 />
               )}
 

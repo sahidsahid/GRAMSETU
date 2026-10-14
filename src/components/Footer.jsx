@@ -5,7 +5,7 @@ export function Footer({ activeLang, t }) {
   const f = t?.footer || {};
 
   return (
-    <footer className="mt-16 border-t-2 border-[#1E1E24] bg-[#EFEADF] dark:bg-[#10121A] pt-10 pb-8 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 relative overflow-hidden transition-colors">
+    <footer className="mt-16 border-t border-[#262B3D] bg-[#0E101B] text-[#DCE6F8] pt-10 pb-8 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 relative overflow-hidden">
       {/* Subtle stickers in background */}
       <div className="absolute right-8 top-4 opacity-25 pointer-events-none hidden md:block">
         <StarburstSticker size={72} color="#A3B7D8" />
